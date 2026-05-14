@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thanseer</title>
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -33,97 +35,18 @@
               surface: "#F4F5FF",
             },
             animation: {
-              "fade-up": "fadeUp 0.7s ease both",
-              "fade-in": "fadeIn 0.6s ease both",
               float: "float 6s ease-in-out infinite",
-              pulse2: "pulse2 3s ease-in-out infinite",
             },
             keyframes: {
-              fadeUp: {
-                "0%": { opacity: 0, transform: "translateY(30px)" },
-                "100%": { opacity: 1, transform: "translateY(0)" },
-              },
-              fadeIn: {
-                "0%": { opacity: 0 },
-                "100%": { opacity: 1 },
-              },
               float: {
                 "0%, 100%": { transform: "translateY(0px)" },
                 "50%": { transform: "translateY(-12px)" },
-              },
-              pulse2: {
-                "0%, 100%": { opacity: 0.4, transform: "scale(1)" },
-                "50%": { opacity: 0.7, transform: "scale(1.08)" },
               },
             },
           },
         },
       };
     </script>
-
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "DM Sans", sans-serif;
-        background: #f4f5ff;
-        color: #0a0a0f;
-      }
-
-      .font-display {
-        font-family: "Syne", sans-serif;
-      }
-
-      .glass-nav {
-        backdrop-filter: blur(16px);
-        background: rgba(244, 245, 255, 0.88);
-        border-bottom: 1px solid rgba(91, 107, 248, 0.1);
-      }
-
-      .gradient-text {
-        background: linear-gradient(
-          135deg,
-          #5b6bf8 0%,
-          #818cf8 50%,
-          #a5b4fc 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      #mobile-menu {
-        transition:
-          max-height 0.35s ease,
-          opacity 0.3s ease;
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-      }
-      #mobile-menu.open {
-        max-height: 400px;
-        opacity: 1;
-      }
-
-      .nav-active {
-        color: #5b6bf8;
-        position: relative;
-      }
-      .nav-active::after {
-        content: "";
-        position: absolute;
-        bottom: -3px;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: #5b6bf8;
-        border-radius: 2px;
-      }
-    </style>
   </head>
 
   <body>
@@ -135,7 +58,11 @@
           href="index.html"
           class="font-display font-bold text-xl text-accent tracking-tight"
         >
-          Thanseer
+          <img
+            src="images/logo.png"
+            alt="logo"
+            class="w-10 h-10 bg-black rounded-md"
+          />
         </a>
 
         <ul
@@ -159,12 +86,14 @@
             >
           </li>
           <li>
-            <a href="projects.html" class="hover:text-accent transition-colors"
-              >Projects</a
+            <a
+              href="experience.html"
+              class="hover:text-accent transition-colors"
+              >Experience</a
             >
           </li>
           <li>
-            <a href="services.html" class="hover:text-accent transition-colors"
+            <a href="service.html" class="hover:text-accent transition-colors"
               >Services</a
             >
           </li>
@@ -212,20 +141,19 @@
             >
           </li>
           <li>
-            <a href="projects.html" class="hover:text-accent transition-colors"
-              >Projects</a
+            <a
+              href="experience.html"
+              class="hover:text-accent transition-colors"
+              >Experience</a
             >
           </li>
           <li>
-            <a href="services.html" class="hover:text-accent transition-colors"
+            <a href="service.html" class="hover:text-accent transition-colors"
               >Services</a
             >
           </li>
           <li>
-            <a
-              href="contact.html"
-              class="hover:text-accent transition-colors"
-            >
+            <a href="contact.html" class="hover:text-accent transition-colors">
               Contact Me
             </a>
           </li>
@@ -233,15 +161,12 @@
       </div>
     </nav>
 
-    <section
-      class="relative min-h-screen flex items-center noise pt-24 pb-16 "
-    >
-
+    <section class="relative min-h-screen flex items-center pt-24 pb-16">
       <div class="max-w-6xl mx-auto px-6 relative z-10 w-full">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div class="w-full">
             <div
-              class="w-max bg-white border border-accent/20 rounded-full px-4 py-1.5 text-xs font-semibold text-accent mb-6 animate-fade-up shadow-sm"
+              class="w-max bg-white border border-accent/20 rounded-full px-4 py-1.5 text-xs font-semibold text-accent mb-6 shadow-sm"
             >
               <span
                 class="w-2 h-2 bg-green-400 rounded-full animate-ping inline-block mr-1.5"
@@ -249,9 +174,7 @@
               Available for work
             </div>
 
-            <p
-              class="font-display text-2xl font-semibold text-accent mb-2 animate-fade-up delay-100"
-            >
+            <p class="font-display text-2xl font-semibold text-accent mb-2">
               Hi, I'm Thanseer 👋
             </p>
 
@@ -281,21 +204,19 @@
               </span>
             </h1>
 
-            <p
-              class=" text-muted text-lg leading-relaxed max-w-md animate-fade-up delay-300"
-            >
+            <p class="text-muted text-lg leading-relaxed max-w-md">
               I design and develop clean, responsive, and modern web experiences
               using HTML, CSS, Tailwind & JavaScript.
             </p>
 
-            <div class="flex gap-4 sm:gap-10 mt-12 animate-fade-up delay-500">
+            <div class="flex gap-4 sm:gap-10 mt-12">
               <div>
-                <p class="font-display text-3xl font-extrabold text-ink">2+</p>
-                <p class="text-muted text-sm mt-0.5">Years Experience</p>
+                <p class="font-display text-3xl font-extrabold text-ink">1+</p>
+                <p class="text-muted text-sm mt-0.5">Year Experience</p>
               </div>
               <div class="w-px bg-ink/10"></div>
               <div>
-                <p class="font-display text-3xl font-extrabold text-ink">30+</p>
+                <p class="font-display text-3xl font-extrabold text-ink">10+</p>
                 <p class="text-muted text-sm mt-0.5">Projects Done</p>
               </div>
               <div class="w-px bg-ink/10"></div>
@@ -308,11 +229,9 @@
             </div>
           </div>
 
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 gap-5 animate-fade-up delay-300 w-full"
-          >
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
             <div
-              class="hover:none bg-white rounded-3xl p-6 shadow-sm border border-white/80 cursor-default transition-all duration-300 md:hover:-translate-y-3 md:hover:scale-105 md:hover:shadow-2xl md:hover:shadow-accent/20"
+              class="bg-white rounded-3xl p-6 shadow-sm border border-white/80 cursor-default transition-all duration-300 md:hover:-translate-y-3 md:hover:scale-105 md:hover:shadow-2xl md:hover:shadow-accent/20"
             >
               <div
                 class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent text-2xl mb-4 animate-float"
@@ -342,7 +261,7 @@
             </div>
 
             <div
-              class="hover:none bg-accent rounded-3xl p-6 shadow-sm cursor-default transition-all duration-300 md:hover:translate-x-3 md:hover:scale-105 md:hover:shadow-2xl md:hover:shadow-accent/20"
+              class="bg-accent rounded-3xl p-6 shadow-sm cursor-default transition-all duration-300 md:hover:translate-x-3 md:hover:scale-105 md:hover:shadow-2xl md:hover:shadow-accent/20"
             >
               <div
                 class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-white text-2xl mb-4 animate-float"
@@ -369,7 +288,7 @@
             </div>
 
             <div
-              class="hover:none bg-ink rounded-3xl p-6 shadow-sm cursor-default transition-all duration-300 md:hover:-translate-x-3 md:hover:scale-105 md:hover:shadow-2xl md:hover:shadow-accent/20"
+              class="bg-ink rounded-3xl p-6 shadow-sm cursor-default transition-all duration-300 md:hover:-translate-x-3 md:hover:scale-105 md:hover:shadow-2xl md:hover:shadow-accent/20"
             >
               <div
                 class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-white text-2xl mb-4 animate-float"
@@ -392,7 +311,7 @@
             </div>
 
             <div
-              class="hover:none bg-white rounded-3xl p-6 shadow-sm cursor-default transition-all duration-300 md:hover:translate-y-3 md:hover:scale-105 md:hover:shadow-2xl md:hover:shadow-accent/20"
+              class="bg-white rounded-3xl p-6 shadow-sm cursor-default transition-all duration-300 md:hover:translate-y-3 md:hover:scale-105 md:hover:shadow-2xl md:hover:shadow-accent/20"
             >
               <div
                 class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent text-2xl mb-4 animate-float"
@@ -485,33 +404,6 @@
       </div>
     </footer>
 
-    <script>
-      // Mobile menu toggle
-      const hamburger = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById("mobile-menu");
-      hamburger.addEventListener("click", () => {
-        mobileMenu.classList.toggle("open");
-      });
-
-      // Scroll-triggered animations
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.style.opacity = "1";
-              e.target.style.transform = "translateY(0)";
-            }
-          });
-        },
-        { threshold: 0.1 },
-      );
-
-      document.querySelectorAll(".animate-fade-up").forEach((el) => {
-        el.style.opacity = "0";
-        el.style.transform = "translateY(30px)";
-        el.style.transition = "opacity 0.7s ease, transform 0.7s ease";
-        observer.observe(el);
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
